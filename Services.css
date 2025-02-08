@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Body Styling */
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column; /* Aligns header, main, footer vertically */
+    background-image: url("tankerimage.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+/* Header */
+header {
+    flex-shrink: 0; /* Ensures header stays at the top */
+    width: 100%;
+    background: transparent;
+}
+
+nav {
+    height: 80px;
+    font-size: 16px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 1px solid white;
+
+}
+
+nav .logo h1 {
+    font-size: 24px;
+    /* color: white; */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color:black;
+    width: 0;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color:black;
+}
+
+nav ul li a:hover:after {
+    width: 100%;
+}
+
+/* Menu Bar (for Mobile) */
+.menu-bar {
+    display: none;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Main Content */
+.main {
+    flex: 1; /* Fills the remaining space between header and footer */
+    padding: 20px;
+}
+
+.servCont {
+    width: 30%;  /* 4 units out of 12 */
+    height: 100px; /* Optional height */
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 900;
+    margin: 5px;
+    
+}
+
+.servProvides{
+    text-align: right;
+    width: 40%;
+    height: 150px;
+    margin-left: 70%;
+    margin-top: 12%;
+    margin-bottom: 30px;
+}
+.servProvides li h3{
+      margin-top: 10px;
+      text-align: left;
+      font-size: 18px;
+       
+}
+.servVideo{
+    height: 300px;
+    width:80%;
+    background-color: transparent;
+    margin:10% ;
+    border-radius: 5%;
+    
+    
+}
+.servVideo video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2vw;
+
+    
+}
+.servFooter{
+    background-color: transparent;
+    text-align: right;
+    width: 40%;
+    height: 250px;
+    margin-left: 50%;
+    margin-top: 12%;
+    margin-bottom: 30px;
+
+}
+.border{
+    
+   border: 1px solid white;
+}
+.servFooter h1{
+    text-align: left;
+    padding: 5px;
+}
+.servFooter  li h3 {
+    margin-top: 10px;
+    text-align: left;
+    font-size: 18px;
+     
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid white;
+    flex-shrink: 0; /* Ensures footer stays at the bottom */
+    text-align: center;
+    padding: 10px;
+    background: transparent;
+    color: white;
+}
+
+
+
+/* Responsive Design */
+@media only screen and (max-width: 1140px) {
+    /* Navigation */
+    nav ul {
+        display: none; /* Hide the menu by default */
+    }
+
+    .menu-bar {
+        display: block;
+        font-size: 6vw; /* Adjust font size for smaller screens */
+    }
+
+    nav .logo h1 {
+        padding: 10px 0;
+        font-size: 6vw;
+    }
+
+    /* Adjust Main Content */
+    .main {
+        padding: 10px;
+    }
+    .servHeader h1{
+        font-size: 11vw;
+        margin: 10%;
+    }
+    .servHeader .servCont {
+        width: 90%; /* Full width for smaller screens */
+        margin: 10%;
+        font-size: 4vw;
+    }
+    
+    .servProvides {
+        text-align: center;
+        width: 100%; /* Center and take full width */
+        font-size: 5vw;
+        padding: 33%;
+        margin:40%;;
+    
+    }
+
+    .servProvides li h3 {
+        text-align: left;
+        font-size: 4vw;
+    }
+
+    .servVideo {
+        margin-top: 30%;
+        width: 90%; /* Center the video and resize */
+        margin: 10%;
+        height: 300px;
+    }
+
+    .servFooter {
+        text-align: center;
+        width: 90%;
+        margin: 20px auto;
+        font-size: 16px;
+    }
+
+    .servFooter h1 {
+        text-align: center;
+        padding: 5px;
+        font-size: 18px;
+    }
+
+    .servFooter li h3 {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+    }
+}
