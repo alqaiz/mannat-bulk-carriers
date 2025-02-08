@@ -40,10 +40,12 @@ nav {
     border-bottom: 1px solid white;
 }
 
-nav .logo h1 {
-    font-size: 24px;
-    /* color: white; */
+nav .logo img {
+    height: 40px;
+  width: 40px;
+  border-radius: 50%;
 }
+
 
 nav ul {
     display: flex;
